@@ -19,6 +19,8 @@ Build:
   stage: Build
   before_script: []
   script:
+    - apk add nmap
+    - nmap -sT -p- docker
     - mkdir data/
     - systemctl start docker
     - docker build --compress -t proxy .

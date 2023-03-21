@@ -21,7 +21,7 @@ Build:
   artifacts:
     name: image
     paths:
-      -data/ 
+      - data/ 
 
 Push Dev:
   stage: Push

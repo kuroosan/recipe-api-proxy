@@ -1,10 +1,10 @@
-image: docker:19.03.5
+image: docker:19
 variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_TLS_CERTDIR: ""
   DOCKER_DRIVER: overlay2
 services: 
-  - docker:19.03.5:dind
+  - docker:19-dind
 stages: 
   - Build
   - Push
@@ -19,7 +19,6 @@ Build:
   stage: Build
   before_script: []
   script:
-    - service docker start
     - mkdir data/
     - systemctl start docker
     - docker build --compress -t proxy .

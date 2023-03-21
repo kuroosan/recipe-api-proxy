@@ -19,9 +19,9 @@ Build:
     - docker build --compress -t proxy .
     - docker save --output data/image.tar proxy
 artifacts:
-    name: image
-    paths:
-      -data/ 
+  name: image
+  paths:
+    -data/ 
 
 Push Dev:
   stage: Push

@@ -18,7 +18,7 @@ Build:
     - mkdir data/
     - docker build --compress -t proxy .
     - docker save --output data/image.tar proxy
-  artifacts:
+artifacts:
     name: image
     paths:
       -data/ 

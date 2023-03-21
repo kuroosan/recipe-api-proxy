@@ -20,7 +20,6 @@ Build:
   before_script: []
   script:
     - mkdir data/
-    - systemctl start docker
     - docker build --compress -t proxy .
     - docker save --output data/image.tar proxy
   artifacts:

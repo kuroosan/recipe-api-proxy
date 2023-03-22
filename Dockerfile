@@ -1,7 +1,7 @@
 FROM nginxinc/nginx-unprivileged:1-alpine
 LABEL maintainer="gk.karthik333@gmail.com"
 
-COPY ./default.conf.tpl /etc/ginx/default.conf.tpl
+COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 COPY ./uwsgi_params /etc/nginx/uwsgi_params
 
 ENV LISTEN_PORT=8000
